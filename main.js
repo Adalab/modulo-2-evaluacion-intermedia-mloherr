@@ -17,7 +17,7 @@ function changeInnerText(text) {
 }
 
 function compareNumbers(input) {
-  if (input <= 0 || input > 100) {
+  if (input < 1 || input > 100) {
     changeInnerText('El número debe estar entre 1 y 100');
   } else if (input > randomNumber) {
     changeInnerText('Demasiado alto');
