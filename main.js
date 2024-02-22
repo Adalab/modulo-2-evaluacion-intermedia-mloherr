@@ -29,8 +29,9 @@ function compareNumbers(input) {
 }
 
 let counterAccumulator = 0;
-const attempsCounter = () =>
-  (counter.innerHTML = `Número de intentos: ${(counterAccumulator += 1)}`);
+const attempsCounter = () => {
+  counter.innerHTML = `Número de intentos: ${(counterAccumulator += 1)}`;
+};
 
 function handleClick(event) {
   event.preventDefault();
