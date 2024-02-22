@@ -4,11 +4,12 @@ const button = document.querySelector('.js-button');
 const inputNumber = document.querySelector('.js-inputNumber');
 const textClues = document.querySelector('.js-messageClues');
 const counter = document.querySelector('.js-counter');
+const buttonRestart = document.querySelector('.js-restartButton');
 
 function getRandomNumber(max) {
   return Math.ceil(Math.random() * max);
 }
-const randomNumber = getRandomNumber(100);
+let randomNumber = getRandomNumber(100);
 console.log(randomNumber);
 
 function changeInnerText(text) {
@@ -41,3 +42,13 @@ function handleClick(event) {
 }
 
 button.addEventListener('click', handleClick);
+
+const handleReset = () => {
+  counter.innerHTML = `Número de intentos: 0`;
+  textClues.innerHTML = ` Pista: Escribe el número y dale a Prueba`;
+  inputNumber.value = inputNumber.defaultValue;
+  randomNumber = getRandomNumber(100);
+  console.log(randomNumber);
+};
+
+buttonRestart.addEventListener('click', handleReset);
