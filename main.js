@@ -12,11 +12,11 @@ const randomNumber = getRandomNumber(100);
 console.log(randomNumber);
 
 function changeInnerText(text) {
+  textClues.innerHTML = '';
   textClues.innerHTML = text;
 }
 
 function compareNumbers(input) {
-  textClues.innerHTML = '';
   if (input <= 0 || input > 100) {
     changeInnerText('El número debe estar entre 1 y 100');
   } else if (input > randomNumber) {
