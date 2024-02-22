@@ -35,7 +35,7 @@ const attempsCounter = () => {
 
 function handleClick(event) {
   event.preventDefault();
-  const userNumber = inputNumber.value;
+  const userNumber = parseInt(inputNumber.value);
   compareNumbers(userNumber);
   attempsCounter();
 }
