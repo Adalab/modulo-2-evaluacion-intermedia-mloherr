@@ -11,16 +11,20 @@ function getRandomNumber(max) {
 const randomNumber = getRandomNumber(100);
 console.log(randomNumber);
 
+function changeInnerText(text) {
+  textClues.innerHTML = text;
+}
+
 function compareNumbers(input) {
   textClues.innerHTML = '';
   if (input <= 0 || input > 100) {
-    textClues.innerHTML = 'El número debe estar entre 1 y 100';
+    changeInnerText('El número debe estar entre 1 y 100');
   } else if (input > randomNumber) {
-    textClues.innerHTML = 'Demasiado alto';
+    changeInnerText('Demasiado alto');
   } else if (input < randomNumber) {
-    textClues.innerHTML = 'Demasiado bajo';
+    changeInnerText('Demasiado bajo');
   } else {
-    textClues.innerHTML = '¡Has ganado, campeona!';
+    changeInnerText('¡Has ganado, campeona!');
   }
 }
 
